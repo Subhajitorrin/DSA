@@ -1,16 +1,18 @@
-#include <bits/stdc++.h> 
-void inplaceRotate(vector<vector<int>> &inputArray)
-{
-    // getting the length of the matrix
-    int n=inputArray.size();
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n=3,m=4;
+    int matrix[n][m]={
+        {1,2,3,0},
+        {0,5,0,8},
+        {6,0,7,9}
+    };
 
-    // transpose the matrix
-    for(int i=0;i<=n-2;i++){
-        for(int j=i+1;j<=n-1;j++){
-            swap(inputArray[i][j],inputArray[j][i]);
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            cout<<matrix[i][j];
         }
+        cout<<endl;
     }
-
-    // reverse the rows of the matrix
-    reverse(inputArray.begin(),inputArray.end());
+    return 0;
 }
